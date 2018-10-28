@@ -1,0 +1,44 @@
+@import 'src/styles/utils';
+
+.login-background{
+  @include background-pattern();
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.login-wrapper{
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 1rem;
+
+  padding-top : 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+
+  width: 320px;
+  @include media("<small"){
+    width:90%;
+  }
+
+  .login-title{
+    font-size: 2.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-weight: bold;
+  }
+  hr{
+    border-width: 0.7px;
+    border-color: $oc-gray-1;
+  }
+}

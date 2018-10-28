@@ -1,13 +1,13 @@
 /*
-  스토어를 생성
+  스토어 설정파일
 */
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
-import penderMiddleware from 'redux-pender';
+import ReduxThunk from 'redux-thunk';
 
 import * as modules from './modules';
 
 const reducers = combineReducers(modules);
-const middlewares = [penderMiddleware];
+const middlewares = [ReduxThunk];
 
 const isDev = process.env.NODE_ENV === 'development';
 const devtools = isDev && window.__REDUX_DEVTOOLES_EXTENDSION_COMPOSE__;

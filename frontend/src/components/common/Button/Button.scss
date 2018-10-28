@@ -1,0 +1,77 @@
+@import 'src/styles/utils';
+
+.button{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: white;
+  user-select: none;
+  display: inline-flex;
+
+  &.default{
+    background: $oc-yellow-6;
+    &:hover{
+      background: $oc-yellow-6;
+    }
+    &:active{
+      background: $oc-yellow-6;
+    }
+  }
+
+  &.gray{
+    background: $oc-gray-7;
+    &:hover{
+      background: $oc-gray-6;
+    }
+    &:active{
+      background: $oc-gray-7;
+    }
+  }
+
+  &.outline{
+    border: 2px solid white;
+    border-radius: 4px;
+    &:hover{
+      background:white;
+      color: #DD5E89;  /* fallback for old browsers */
+    }
+    &:active{
+      background: rgba(255, 255, 255, 0.85);
+      border: 2px solid rgba(255, 255, 255, 0.85);
+    }
+  }
+  &.grayoutline{
+    border: 1px solid $oc-gray-3;
+    color: $oc-gray-7;
+    background: white;
+    &:hover{
+      background:$oc-gray-1;
+    }
+    &:active{
+      background:$oc-gray-5;
+      color: white;
+    }
+  }
+
+  &:hover{
+    @include material-shadow(2, 0.5);
+  }
+  &.disabled{
+    background: $oc-gray-4;
+    color: $oc-gray-6;
+    cursor: default;
+    &:hover, &:active{
+      box-shadow: none;
+      color: $oc-gray-6;
+      background: $oc-gray-4;
+    }
+  }
+
+  //버튼 두개가 연속으로 있을 경우
+  &+&{
+    margin-left:0.5rem;
+  }
+}
