@@ -1,13 +1,13 @@
 import React from 'react';
 
 import LoginTemplate from 'components/login/LoginTemplate'
-import LoginForm from 'components/login/LoginForm';
+import LoginFormContainer from 'containers/login/LoginFormContainer';
 
 //accountLogin 만들것!
 const LoginPage = () => {
   return (
     <LoginTemplate 
-      loginForm={<LoginForm />}
+      loginForm={<LoginFormContainer />}
     />
   )
 }

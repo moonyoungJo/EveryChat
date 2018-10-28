@@ -6,7 +6,7 @@ import Button from 'components/common/Button';
 
 const cx = classNames.bind(styles);
 
-const LoginForm = ({id, onIdChange, onKeyPress, password, onPasswordChange, onLogin, onJoinUs}) => (
+const LoginForm = ({id, onIdChange, onKeyPress, password, onPasswordChange, onLogin}) => (
   <div className={cx('loginForm')}> 
     <div className={cx('loginForm-text')}>
       아이디
@@ -34,7 +34,7 @@ const LoginForm = ({id, onIdChange, onKeyPress, password, onPasswordChange, onLo
     </div>
     <div className={cx('loginForm-buttons')}>
       <Button onClick={onLogin}>로그인</Button>
-      <Button onClick={onJoinUs}>회원가입</Button>
+      <Button to={'/joinus'}>회원가입</Button>
     </div>
   </div>
 );
